@@ -11,4 +11,12 @@ The private repo is what we use while writing and developing the site. The publi
 
 -----
 
-This repo is not part of the process - it just illustrates files found in the private `notes-source` folder described in the article. 
+This repo is not part of the process - it just illustrates files found in the private `notes-source` folder described in the article.
+
+The GitHub repo [Actions](https://github.com/denisecase/notes-source-example/actions) will not work - the [deploy.yml](https://github.com/denisecase/notes-source-example/blob/main/.github/workflows/deploy.yml) file needs to replace the line:
+
+[personal_token: ${{ secrets.PERSONAL_TOKEN }}](https://github.com/denisecase/notes-source-example/blob/main/.github/workflows/deploy.yml#L38)
+
+with the actual value. The secret is only available in the private repo, [notes-source](https://github.com/denisecase/notes-source) where this line looks more like:
+
+personal_token: personal_token: ghp_abcdefghijklmnopq...
