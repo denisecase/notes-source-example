@@ -4,8 +4,8 @@ For instructions on how to use Hugo and GitHub Pages to host your content for fr
 
 The linked article shows how to create:
 
-- a private repo (e.g., notes-source)
-- a public repo (e.g., notes)
+- a private repo (e.g., [notes-source](https://github.com/denisecase/notes-source))
+- a public repo (e.g., [notes](https://github.com/denisecase/notes))
 
 The private repo is what we use while writing and developing the site. The public repo gets automatically generated using Hugo and GitHub Actions. The public repo hosts the site for free using GitHub Pages.
 
