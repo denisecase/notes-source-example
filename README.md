@@ -11,4 +11,4 @@ The private repo is what we use while writing and developing the site. The publi
 
 -----
 
-This repo is not used. This repo is only used to display files used in the private `notes-source` folder described in the article. 
+This repo is not part of the process - it just illustrates files found in the private `notes-source` folder described in the article. 
