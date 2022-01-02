@@ -1,0 +1,18 @@
+# Hugo default output directory & other
+/public/
+/resources/_gen/
+
+# Hugo executable
+hugo.exe
+hugo.darwin
+hugo.linux
+
+## OS Files
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# OSX
+.DS_Store

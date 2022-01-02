@@ -1,0 +1,41 @@
+name: Hugo Deploy
+
+# Each .yml file in this folder defines a workflow.
+# Each workflow runs 1+ jobs sequentially or in parallel.
+# Each job has a sequence of steps.
+# actions/checkout checks out repo under $GITHUB_WORKSPACE, so job can access
+# Cannot use secrets.GITHUB_TOKEN as it is not permitted to access to external repositories. 
+# To copy repo, create a personal access token and use secrets.PERSONAL_TOKEN
+
+on:
+  push:
+    branches: main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      
+      - uses: actions/checkout@v2
+        with:
+          submodules: true # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 1  
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+      
+      - name: Build
+        run: hugo -D --gc --minify --cleanDestinationDir
+      
+      - name: Copy and Deploy
+        uses: peaceiris/actions-gh-pages@v3.7.3
+        if: github.ref == 'refs/heads/main'
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          external_repository: denisecase/notes
+          publish_branch: main
+          publish_dir: ./public

@@ -1,0 +1,84 @@
+baseURL = 'https://denisecase.github.io/notes/'
+languageCode = 'en-us'
+title = 'Notes'
+theme = 'beautifulhugo'
+metaDataFormat = "yaml"
+pygmentsStyle = "trac"
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+enableGitInfo = false
+summaryLength = 20
+
+[Params]
+  commit = "https://github.com/denisecase/notes/tree/"
+  subtitle = "Keeping track of interesting things"
+  mainSections = ["post","posts"]
+  logo = "img/avatar-icon.png" # Expecting square dimensions
+  favicon = "img/favicon.ico"
+  dateFormat = "Mon January 1, 2006"
+  commit = false
+  rss = false
+  comments = true
+  readingTime = true
+  wordCount = true
+  useHLJS = true
+  socialShare = true
+  delayDisqus = true
+  showRelatedPosts = true
+
+[Author]
+  name = "Denise Case"
+  website = "https://denisecase.github.io/notes/"
+  email = "denisecase@gmail.com"
+  # facebook = "username"
+  github = "denisecase"
+  # gitlab = "username"
+  bitbucket = "denisecae"
+  # twitter = "username"
+  # reddit = "username"
+  linkedin = "denisecase"
+  # xing = "username"
+  # stackoverflow = "users/XXXXXXX/username"
+  # snapchat = "username"
+  # instagram = "username"
+  # youtube = "user/username" # or channel/channelname
+  # soundcloud = "username"
+  # spotify = "username"
+  # bandcamp = "username"
+  # itchio = "username"
+  # vk = "username"
+  # paypal = "username"
+  # telegram = "username"
+  # 500px = "username"
+  # codepen = "username"
+  # mastodon = "url"
+  # kaggle = "username"
+  # weibo = "username"
+  # slack = "username"
+
+[[menu.main]]
+    name = "Notes"
+    url = ""
+    weight = 1
+
+#[[menu.main]]
+#    name = "About"
+#    url = "page/about/"
+#    weight = 3
+
+[[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    weight = 2
+
+[[menu.main]]
+    parent = "projects"
+    name = "Publish"
+    url = "post/2022-01-01-publish"
+    weight = 1
+
+[[menu.main]]
+    name = "Tags"
+    url = "tags"
+    weight = 3
